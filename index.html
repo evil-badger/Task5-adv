@@ -11,9 +11,9 @@
     <div class="article">
         <p class="universe starColor">Почему все так сложно?<br>Почему нужно прикладывать усилия чтобы понять новое?<br>Где-то этот мир свернул не туда. Я не могу привыкнуть к этому явлению. Не могу принять это.<br>Примерно с такими мыслями я сталкиваюсь с новыми сложностями.<br> Ну а у нас новое задание, которое требует усилий, но осиливший дорогу получит заслуженное удовлетворение.</p>
         <div class="grid">
-            <button class="myButton" onclick="random()">1.Генерация массива длинной в 15 елементов</button>
-            <button class="myButton" onclick="random()">2.Выведите все элементы которые делятся на 3 в консоль</button>
-            <button class="myButton" onclick="empty()">3.шаблон</button>
+            <button class="myButton" onclick="getRandom()">1.Генерация массива длинной в 15 елементов</button>
+            <button class="myButton" onclick="filterDivide3()">2.Выведите все элементы которые делятся на 3 в консоль</button>
+            <button class="myButton" onclick="upper7()">3.шаблон</button>
             <button class="myButton" onclick="empty()">3.шаблон</button>
             <button class="myButton" onclick="empty()">3.шаблон</button>
             <button class="myButton" onclick="empty()">3.шаблон</button>
@@ -29,13 +29,29 @@
 ЗАДАЧА НА ПОИСКАТЬ. Удалите из массива первый элемент и выведете резаультат, затем удалите последний элемент и выведите результат
 
     <script>
-
         function random(){
-            const arr=[];
-            for(let i=0;i<15;i++){
-                arr[i]=Math.floor(Math.random()*21);
-            }
-            console.log(arr);
+        const arr=[];
+        for(let i=0;i<15;i++){
+            arr[i]=Math.floor(Math.random()*21);
+        }
+        return arr;
+        }
+
+        function getRandom(){
+            const result=random();
+            console.log(result);
+        }
+
+        function filterDivide3(){
+            const result =random();
+            const result2=result.filter(e=>((e%3)===0));
+            console.log(result2);
+        }
+
+        function upper7(){
+                const result=random();
+                const result2 = result.find(e => e>18);
+                result2==undefined?console.log("Все числа больше значения 7"):console.log(result2);
         }
 
         function both(){
@@ -50,7 +66,6 @@
             }
             console.log(array3);
 
-            // expected output: true
         }
     </script>
 </body>
