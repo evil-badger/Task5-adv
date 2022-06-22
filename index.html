@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="article">
+        <p class="universe starColor">Почему все так сложно?<br>Почему нужно прикладывать усилия чтобы понять новое?<br>Где-то этот мир свернул не туда. Я не могу привыкнуть к этому явлению. Не могу принять это.<br>Примерно с такими мыслями я сталкиваюсь с новыми сложностями.<br> Ну а у нас новое задание, которое требует усилий, но осиливший дорогу получит заслуженное удовлетворение.</p>
+        <div class="grid">
+            <button class="myButton" onclick="random()">1.Генерация массива длинной в 15 елементов</button>
+            <button class="myButton" onclick="random()">2.Выведите все элементы которые делятся на 3 в консоль</button>
+            <button class="myButton" onclick="empty()">3.шаблон</button>
+            <button class="myButton" onclick="empty()">3.шаблон</button>
+            <button class="myButton" onclick="empty()">3.шаблон</button>
+            <button class="myButton" onclick="empty()">3.шаблон</button>
+            <button class="myButton" onclick="both()">7.Задание со звездочкой</button>
+
+        </div>
+    </div>
+
+    Выведите все элементы которые делятся на 3 в консоль
+Выведите первый элемент, который больше 7, если такого нет, напишите что все элементы меньше 7и
+Выведете массив. в котором каждый элемент умножен на 2. (ИСХОДНЫЙ МАССИВ ИПОЛЬЗУЕМ ИЗ ПУНКТА 1)
+Сложить все четные элементы массива
+ЗАДАЧА НА ПОИСКАТЬ. Удалите из массива первый элемент и выведете резаультат, затем удалите последний элемент и выведите результат
+
+    <script>
+
+        function random(){
+            const arr=[];
+            for(let i=0;i<15;i++){
+                arr[i]=Math.floor(Math.random()*21);
+            }
+            console.log(arr);
+        }
+
+        function both(){
+            
+            const array1 = ['dog', 'cat', 'bird', 'rabbit', 'horse'];
+            const array2 = ['apple', 'car', 'cat', 'ball', 'horse'];
+            const array3=[];
+            for(let i=0;i<array2.length;i++){
+                if(array1.includes(array2[i])==true){
+                    array3.push(array2[i]);
+                }
+            }
+            console.log(array3);
+
+            // expected output: true
+        }
+    </script>
+</body>
+</html>
